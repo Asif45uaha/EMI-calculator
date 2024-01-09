@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMI-Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </head>
+  <body>
+    <section class="container">
+      <form class="calculator">
+        <h1 style="text-align: center">EMI Calculator</h1>
+        <div class="loan-amt">
+          <div class="amount-wrapper">
+            <label
+              for="loan-amount"
+              style="font-size: large; font-weight: bold; width: 100%"
+              >Loan Amount</label
+            >
+            <output
+              style="
+                background-color: rgb(179, 214, 179);
+                padding: 5px;
+                font-size: large;
+                font-weight: bold;
+                color: green;
+                width: 35%;
+                text-align: right;
+                border-radius: 5px;
+                padding-right: 10px;
+              "
+              id="loan-amount-value"
+            >
+              $ 100000
+            </output>
+          </div>
+          <input type="range" id="loan-amount" min="100000" max="1000000" />
+        </div>
+        <div class="interest-percent">
+          <div class="interest-wrapper">
+            <label
+              for="interest-percent"
+              style="font-size: large; font-weight: bold; width: 100%"
+              >Rate of Interest (p.a)</label
+            >
+            <output
+              id="interest-rate-value"
+              style="
+                background-color: rgb(179, 214, 179);
+                padding: 5px;
+                font-size: large;
+                font-weight: bold;
+                color: green;
+                width: 35%;
+                text-align: right;
+                border-radius: 5px;
+                padding-right: 10px;
+              "
+            >
+              1 %
+            </output>
+          </div>
+          <input type="range" id="interest-percent" min="1" max="20" />
+        </div>
+        <div class="loan-tenure">
+          <div class="tenure-wrapper">
+            <label
+              for="tenure"
+              style="font-size: large; font-weight: bold; width: 100%"
+              >Loan tenure</label
+            >
+            <output
+              id="tenure-value"
+              style="
+                background-color: rgb(179, 214, 179);
+                padding: 5px;
+                font-size: large;
+                font-weight: bold;
+                color: green;
+                width: 35%;
+                text-align: right;
+                border-radius: 5px;
+                padding-right: 10px;
+              "
+            >
+              3 yr
+            </output>
+          </div>
+          <input type="range" id="tenure" min="3" max="30" />
+        </div>
+        <div class="btn-wrapper">
+          <button type="submit" id="submit">Calculate</button>
+          <button type="reset" id="reset">Cancel</button>
+        </div>
+        <div class="output-wrapper">
+          <canvas id="loan-chart"></canvas>
+          <div class="emi-output">
+            <p style="font-weight: 500">Monthly EMI</p>
+            <span style="font-weight: 500" id="emi-value">$ 0</span>
+          </div>
+          <div class="principal-output">
+            <p style="font-weight: 500">Principal Amount</p>
+            <span style="font-weight: 500" id="principal-value">$ 0</span>
+          </div>
+          <div class="interest-output">
+            <p style="font-weight: 500">Interest Amount</p>
+            <span style="font-weight: 500" id="interest-value">$ 0</span>
+          </div>
+          <div class="totalAmt-output">
+            <p style="font-weight: 500">Total Amount</p>
+            <span style="font-weight: 500" id="totalAmt-value">$ 0</span>
+          </div>
+        </div>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+.container {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  gap: 10px;
+}
+
+.calculator {
+  background-color: rgba(233, 228, 228, 0.933);
+  width: 30%;
+  margin: auto;
+  box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input [type="range"] {
+  accent-color: green;
+}
+.loan-amt {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.amount-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.interest-percent {
+  display: flex;
+  flex-direction: column;
+}
+
+.interest-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.loan-tenure {
+  display: flex;
+  flex-direction: column;
+}
+
+.tenure-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+#submit {
+  width: 100%;
+  padding: 10px 5px;
+  outline: none;
+  border: none;
+  background: green;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background: rgb(75, 156, 75);
+  transition: all 0.5s ease-in-out;
+}
+
+#reset {
+  width: 100%;
+  padding: 10px 5px;
+  outline: none;
+  border: none;
+  background: gray;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+#reset:hover {
+  background: rgb(169, 164, 164);
+  transition: all 0.5s ease-in-out;
+}
+
+.output-wrapper {
+  background-color: #f1eded;
+  display: none;
+  /* display: flex;
+  flex-direction: column;
+  gap: 5px; */
+  margin-top: 15px;
+  border-radius: 15px;
+}
+
+.emi-output {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.principal-output {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.interest-output {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.totalAmt-output {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
